@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found (404) | CheckMyThing</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Try one of our popular calculators instead." />
+  <meta name="robots" content="noindex, follow" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;}</style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 min-h-screen text-slate-800">
+
+  <header class="bg-white/80 backdrop-blur sticky top-0 z-40 border-b border-slate-200">
+    <div class="max-w-5xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="/" class="flex items-center gap-2 font-bold text-slate-800">
+        <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-sm">✓</span>
+        <span>CheckMyThing</span>
+      </a>
+      <nav aria-label="Main navigation" class="hidden sm:flex items-center gap-6 text-sm text-slate-600">
+        <a href="/calculators" class="hover:text-indigo-600">Calculators</a>
+        <a href="/tools" class="hover:text-indigo-600">Tools</a>
+        <a href="/blog" class="hover:text-indigo-600">Blog</a>
+        <a href="/about" class="hover:text-indigo-600">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 py-16 text-center">
+    <div class="text-8xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">404</div>
+    <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-4">Page not found</h1>
+    <p class="text-slate-600 mt-3 max-w-md mx-auto">The page you're looking for doesn't exist or may have moved. Try one of our popular tools:</p>
+
+    <div class="grid sm:grid-cols-2 gap-3 mt-8 text-left">
+      <a href="/age-calculator" class="p-4 bg-white rounded-xl border border-slate-100 hover:border-indigo-300 hover:shadow transition">
+        <div class="font-semibold text-slate-800">Age Calculator</div>
+        <div class="text-sm text-slate-500 mt-1">Exact age between any two dates.</div>
+      </a>
+      <a href="/bmi-calculator" class="p-4 bg-white rounded-xl border border-slate-100 hover:border-emerald-300 hover:shadow transition">
+        <div class="font-semibold text-slate-800">BMI Calculator</div>
+        <div class="text-sm text-slate-500 mt-1">Find your body mass index.</div>
+      </a>
+      <a href="/date-difference" class="p-4 bg-white rounded-xl border border-slate-100 hover:border-sky-300 hover:shadow transition">
+        <div class="font-semibold text-slate-800">Date Difference</div>
+        <div class="text-sm text-slate-500 mt-1">Days between two dates.</div>
+      </a>
+      <a href="/due-date-calculator" class="p-4 bg-white rounded-xl border border-slate-100 hover:border-pink-300 hover:shadow transition">
+        <div class="font-semibold text-slate-800">Due Date Calculator</div>
+        <div class="text-sm text-slate-500 mt-1">Pregnancy due date estimator.</div>
+      </a>
+    </div>
+
+    <a href="/" class="inline-block mt-8 px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium shadow-md hover:shadow-lg transition">← Back to home</a>
+  </main>
+
+  <footer class="bg-white border-t border-slate-200 mt-12">
+    <div class="max-w-5xl mx-auto px-4 py-8 text-sm text-slate-500">
+      <div class="flex flex-col sm:flex-row justify-between gap-4">
+        <div>© <span id="yr"></span> CheckMyThing</div>
+        <nav class="flex gap-4">
+          <a href="/about" class="hover:text-indigo-600">About</a>
+          <a href="/privacy" class="hover:text-indigo-600">Privacy</a>
+          <a href="/terms" class="hover:text-indigo-600">Terms</a>
+          <a href="/contact" class="hover:text-indigo-600">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>

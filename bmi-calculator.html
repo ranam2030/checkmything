@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMI Calculator – Find Your Body Mass Index &amp; Healthy Weight | CheckMyThing</title>
+  <meta name="description" content="Free BMI calculator. Find your body mass index in metric or imperial units, see your category (underweight, normal, overweight, obese), and your healthy weight range." />
+  <meta name="keywords" content="bmi calculator, body mass index, healthy weight calculator, bmi chart, metric imperial bmi" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://checkmything.com/bmi-calculator" />
+  <meta property="og:title" content="BMI Calculator | CheckMyThing" />
+  <meta property="og:description" content="Free BMI calculator with metric and imperial units, healthy weight range, and clear category explanations." />
+  <meta property="og:url" content="https://checkmything.com/bmi-calculator" />
+  <meta property="og:type" content="website" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "BMI Calculator",
+    "url": "https://checkmything.com/bmi-calculator",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Any",
+    "isAccessibleForFree": true,
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;}
+    .ad-slot{min-height:100px;display:flex;align-items:center;justify-content:center;background:#f8fafc;border:1px dashed #e2e8f0;border-radius:0.75rem;color:#94a3b8;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;}
+    @keyframes fadeIn { from{opacity:0;transform:translateY(8px);} to{opacity:1;transform:translateY(0);} }
+    .animate-fade-in{animation:fadeIn 0.4s ease-out both;}
+  </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-emerald-50 to-teal-100 min-h-screen text-slate-800">
+
+  <header class="bg-white/80 backdrop-blur sticky top-0 z-40 border-b border-slate-200">
+    <div class="max-w-5xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="/" class="flex items-center gap-2 font-bold text-slate-800">
+        <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-sm">✓</span>
+        <span>CheckMyThing</span>
+      </a>
+      <nav aria-label="Main navigation" class="hidden sm:flex items-center gap-6 text-sm text-slate-600">
+        <a href="/calculators" class="hover:text-indigo-600">Calculators</a>
+        <a href="/tools" class="hover:text-indigo-600">Tools</a>
+        <a href="/blog" class="hover:text-indigo-600">Blog</a>
+        <a href="/about" class="hover:text-indigo-600">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <nav aria-label="Breadcrumb" class="max-w-5xl mx-auto px-4 pt-4">
+    <ol class="flex flex-wrap gap-1 text-xs text-slate-500">
+      <li><a href="/" class="hover:text-indigo-600">Home</a></li>
+      <li>›</li>
+      <li><a href="/calculators" class="hover:text-indigo-600">Calculators</a></li>
+      <li>›</li>
+      <li aria-current="page" class="text-slate-700">BMI Calculator</li>
+    </ol>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <article>
+      <header class="text-center mb-8">
+        <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 shadow-lg mb-4 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-7 h-7"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-bold text-slate-900">BMI Calculator</h1>
+        <p class="text-slate-600 mt-3 max-w-2xl mx-auto">Enter your height and weight to find your Body Mass Index, your category, and a healthy weight range.</p>
+      </header>
+
+      <section id="bmi-root" aria-label="BMI calculator tool"></section>
+
+      <aside class="my-8" aria-label="Advertisement">
+        <p class="text-[10px] uppercase tracking-widest text-slate-400 text-center mb-1">Advertisement</p>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="6666666666" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <div class="ad-slot" aria-hidden="true">Ad Space</div>
+      </aside>
+
+      <section class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 sm:p-8 my-8">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Understanding BMI Categories</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-slate-50">
+              <tr>
+                <th class="p-3">Category</th>
+                <th class="p-3">BMI range</th>
+                <th class="p-3">What it means</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr><td class="p-3 font-medium text-sky-700">Underweight</td><td class="p-3">Below 18.5</td><td class="p-3">May indicate malnutrition or an underlying condition.</td></tr>
+              <tr><td class="p-3 font-medium text-emerald-700">Normal weight</td><td class="p-3">18.5 – 24.9</td><td class="p-3">Considered a healthy weight for most adults.</td></tr>
+              <tr><td class="p-3 font-medium text-amber-700">Overweight</td><td class="p-3">25 – 29.9</td><td class="p-3">Slightly elevated risk of some health conditions.</td></tr>
+              <tr><td class="p-3 font-medium text-rose-700">Obese</td><td class="p-3">30 and above</td><td class="p-3">Higher risk of heart disease, type 2 diabetes, and more.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-4 text-sm text-slate-600">BMI is a quick screening tool, not a diagnosis. It doesn't account for muscle mass, bone density, or body composition. Athletes, pregnant women, and children need different assessments — always consult a healthcare professional for a full picture.</p>
+      </section>
+
+      <section class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 sm:p-8 my-8">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">How BMI is Calculated</h2>
+        <p class="text-slate-700">BMI (Body Mass Index) is calculated using a simple formula:</p>
+        <div class="bg-slate-50 rounded-xl p-4 my-4 font-mono text-sm">
+          <div>Metric: BMI = weight (kg) / height (m)²</div>
+          <div class="mt-2">Imperial: BMI = (weight (lb) × 703) / height (in)²</div>
+        </div>
+        <p class="text-slate-700">For example, someone who weighs 70 kg and is 1.75 m tall has a BMI of 70 / (1.75 × 1.75) = 22.9 — a normal weight.</p>
+      </section>
+
+      <aside class="my-8" aria-label="Advertisement">
+        <p class="text-[10px] uppercase tracking-widest text-slate-400 text-center mb-1">Advertisement</p>
+        <div class="ad-slot" aria-hidden="true">Ad Space</div>
+      </aside>
+
+      <section class="my-8">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Related Calculators</h2>
+        <div class="grid sm:grid-cols-3 gap-4">
+          <a href="/age-calculator" class="block p-4 bg-white rounded-xl border border-slate-100 hover:border-indigo-300 hover:shadow transition">
+            <div class="font-semibold text-slate-800">Age Calculator</div>
+            <div class="text-sm text-slate-500 mt-1">Exact age between any two dates.</div>
+          </a>
+          <a href="/date-difference" class="block p-4 bg-white rounded-xl border border-slate-100 hover:border-sky-300 hover:shadow transition">
+            <div class="font-semibold text-slate-800">Date Difference</div>
+            <div class="text-sm text-slate-500 mt-1">Count days, weeks, or business days.</div>
+          </a>
+          <a href="/due-date-calculator" class="block p-4 bg-white rounded-xl border border-slate-100 hover:border-pink-300 hover:shadow transition">
+            <div class="font-semibold text-slate-800">Due Date Calculator</div>
+            <div class="text-sm text-slate-500 mt-1">Estimate pregnancy due date.</div>
+          </a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="bg-white border-t border-slate-200 mt-12">
+    <div class="max-w-5xl mx-auto px-4 py-8 text-sm text-slate-500">
+      <div class="flex flex-col sm:flex-row justify-between gap-4">
+        <div>© <span id="yr"></span> CheckMyThing</div>
+        <nav class="flex gap-4">
+          <a href="/about" class="hover:text-indigo-600">About</a>
+          <a href="/privacy" class="hover:text-indigo-600">Privacy</a>
+          <a href="/terms" class="hover:text-indigo-600">Terms</a>
+          <a href="/contact" class="hover:text-indigo-600">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+
+  <script type="text/babel">
+    const { useState, useMemo } = React;
+
+    function BMICalculator() {
+      const [unit, setUnit] = useState("metric"); // metric or imperial
+      const [heightCm, setHeightCm] = useState("");
+      const [weightKg, setWeightKg] = useState("");
+      const [heightFt, setHeightFt] = useState("");
+      const [heightIn, setHeightIn] = useState("");
+      const [weightLb, setWeightLb] = useState("");
+
+      const result = useMemo(() => {
+        let bmi = null, heightM = null;
+        if (unit === "metric") {
+          const h = parseFloat(heightCm);
+          const w = parseFloat(weightKg);
+          if (!h || !w || h <= 0 || w <= 0) return null;
+          heightM = h / 100;
+          bmi = w / (heightM * heightM);
+        } else {
+          const ft = parseFloat(heightFt) || 0;
+          const inches = parseFloat(heightIn) || 0;
+          const w = parseFloat(weightLb);
+          if ((ft + inches) <= 0 || !w || w <= 0) return null;
+          const totalIn = ft * 12 + inches;
+          heightM = totalIn * 0.0254;
+          bmi = (w * 703) / ((totalIn) * (totalIn));
+        }
+        if (!bmi || isNaN(bmi)) return null;
+
+        let category, color, note;
+        if (bmi < 18.5) { category = "Underweight"; color = "from-sky-400 to-blue-500"; note = "You may benefit from increasing calorie and protein intake. Consult a healthcare provider."; }
+        else if (bmi < 25) { category = "Normal weight"; color = "from-emerald-400 to-teal-500"; note = "Great — you're in the healthy range. Keep up balanced habits."; }
+        else if (bmi < 30) { category = "Overweight"; color = "from-amber-400 to-orange-500"; note = "Small lifestyle changes — daily movement, more vegetables — can make a big difference."; }
+        else { category = "Obese"; color = "from-rose-400 to-red-500"; note = "Consider speaking to a doctor for personalised guidance on weight management."; }
+
+        const healthyMinKg = 18.5 * heightM * heightM;
+        const healthyMaxKg = 24.9 * heightM * heightM;
+        const healthyRange = unit === "metric"
+          ? `${healthyMinKg.toFixed(1)} – ${healthyMaxKg.toFixed(1)} kg`
+          : `${(healthyMinKg * 2.20462).toFixed(1)} – ${(healthyMaxKg * 2.20462).toFixed(1)} lb`;
+
+        return { bmi: bmi.toFixed(1), category, color, note, healthyRange };
+      }, [unit, heightCm, weightKg, heightFt, heightIn, weightLb]);
+
+      return (
+        <div>
+          <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 border border-slate-100">
+            <div className="flex gap-2 mb-5 bg-slate-100 p-1 rounded-xl w-fit">
+              <button onClick={() => setUnit("metric")} className={`px-4 py-1.5 rounded-lg text-sm font-medium transition ${unit === "metric" ? "bg-white shadow text-slate-800" : "text-slate-500"}`}>Metric (cm, kg)</button>
+              <button onClick={() => setUnit("imperial")} className={`px-4 py-1.5 rounded-lg text-sm font-medium transition ${unit === "imperial" ? "bg-white shadow text-slate-800" : "text-slate-500"}`}>Imperial (ft/in, lb)</button>
+            </div>
+
+            {unit === "metric" ? (
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="h-cm" className="block text-sm font-medium text-slate-700 mb-1">Height (cm)</label>
+                  <input id="h-cm" type="number" inputMode="decimal" value={heightCm} onChange={e => setHeightCm(e.target.value)} placeholder="e.g. 175" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 outline-none" />
+                </div>
+                <div>
+                  <label htmlFor="w-kg" className="block text-sm font-medium text-slate-700 mb-1">Weight (kg)</label>
+                  <input id="w-kg" type="number" inputMode="decimal" value={weightKg} onChange={e => setWeightKg(e.target.value)} placeholder="e.g. 70" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 outline-none" />
+                </div>
+              </div>
+            ) : (
+              <div className="grid sm:grid-cols-3 gap-4">
+                <div>
+                  <label htmlFor="h-ft" className="block text-sm font-medium text-slate-700 mb-1">Height (ft)</label>
+                  <input id="h-ft" type="number" inputMode="numeric" value={heightFt} onChange={e => setHeightFt(e.target.value)} placeholder="5" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 outline-none" />
+                </div>
+                <div>
+                  <label htmlFor="h-in" className="block text-sm font-medium text-slate-700 mb-1">Height (in)</label>
+                  <input id="h-in" type="number" inputMode="numeric" value={heightIn} onChange={e => setHeightIn(e.target.value)} placeholder="9" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 outline-none" />
+                </div>
+                <div>
+                  <label htmlFor="w-lb" className="block text-sm font-medium text-slate-700 mb-1">Weight (lb)</label>
+                  <input id="w-lb" type="number" inputMode="decimal" value={weightLb} onChange={e => setWeightLb(e.target.value)} placeholder="155" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 outline-none" />
+                </div>
+              </div>
+            )}
+          </div>
+
+          {result && (
+            <div className="mt-6 bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100 animate-fade-in">
+              <div className={`bg-gradient-to-r ${result.color} p-6 sm:p-8 text-white`}>
+                <div className="text-xs uppercase tracking-wider opacity-80">Your BMI</div>
+                <div className="text-5xl font-bold mt-1">{result.bmi}</div>
+                <div className="mt-1 font-medium">{result.category}</div>
+              </div>
+              <div className="p-6 sm:p-8 text-sm text-slate-700">
+                <p>{result.note}</p>
+                <p className="mt-3"><strong>Healthy range for your height:</strong> {result.healthyRange}</p>
+                <p className="mt-4 text-xs text-slate-400">BMI is a screening tool, not a diagnosis. Consult a healthcare provider for personal advice.</p>
+              </div>
+            </div>
+          )}
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById("bmi-root")).render(<BMICalculator />);
+  </script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pregnancy Due Date Calculator | CheckMyThing</title>
+  <meta name="description" content="Free pregnancy due date calculator. Estimate your baby's due date from your last menstrual period (LMP), with trimester breakdown and key milestones." />
+  <meta name="keywords" content="due date calculator, pregnancy calculator, lmp calculator, pregnancy due date, trimester calculator" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://checkmything.com/due-date-calculator" />
+  <meta property="og:title" content="Pregnancy Due Date Calculator | CheckMyThing" />
+  <meta property="og:description" content="Estimate your baby's due date from your LMP, with trimester breakdown and milestones." />
+  <meta property="og:url" content="https://checkmything.com/due-date-calculator" />
+  <meta property="og:type" content="website" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Pregnancy Due Date Calculator",
+    "url": "https://checkmything.com/due-date-calculator",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Any",
+    "isAccessibleForFree": true,
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;}
+    .ad-slot{min-height:100px;display:flex;align-items:center;justify-content:center;background:#f8fafc;border:1px dashed #e2e8f0;border-radius:0.75rem;color:#94a3b8;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+    .animate-fade-in{animation:fadeIn 0.4s ease-out both;}
+  </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-pink-50 to-rose-100 min-h-screen text-slate-800">
+
+  <header class="bg-white/80 backdrop-blur sticky top-0 z-40 border-b border-slate-200">
+    <div class="max-w-5xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="/" class="flex items-center gap-2 font-bold text-slate-800">
+        <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-sm">✓</span>
+        <span>CheckMyThing</span>
+      </a>
+      <nav aria-label="Main navigation" class="hidden sm:flex items-center gap-6 text-sm text-slate-600">
+        <a href="/calculators" class="hover:text-indigo-600">Calculators</a>
+        <a href="/tools" class="hover:text-indigo-600">Tools</a>
+        <a href="/blog" class="hover:text-indigo-600">Blog</a>
+        <a href="/about" class="hover:text-indigo-600">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <nav aria-label="Breadcrumb" class="max-w-5xl mx-auto px-4 pt-4">
+    <ol class="flex flex-wrap gap-1 text-xs text-slate-500">
+      <li><a href="/" class="hover:text-indigo-600">Home</a></li>
+      <li>›</li>
+      <li><a href="/calculators" class="hover:text-indigo-600">Calculators</a></li>
+      <li>›</li>
+      <li aria-current="page" class="text-slate-700">Due Date</li>
+    </ol>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <article>
+      <header class="text-center mb-8">
+        <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 shadow-lg mb-4 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-7 h-7"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-bold text-slate-900">Pregnancy Due Date Calculator</h1>
+        <p class="text-slate-600 mt-3 max-w-2xl mx-auto">Estimate your baby's due date from your last menstrual period (LMP), and see where you are in your pregnancy journey.</p>
+      </header>
+
+      <section id="due-root" aria-label="Due date calculator"></section>
+
+      <aside class="my-8" aria-label="Advertisement">
+        <p class="text-[10px] uppercase tracking-widest text-slate-400 text-center mb-1">Advertisement</p>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="8888888888" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <div class="ad-slot" aria-hidden="true">Ad Space</div>
+      </aside>
+
+      <section class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 sm:p-8 my-8">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">How the Due Date is Estimated</h2>
+        <p class="text-slate-700">This calculator uses <strong>Naegele's rule</strong>, the standard clinical method: it adds 280 days (40 weeks) to the first day of your last menstrual period. This assumes a regular 28-day cycle with ovulation on day 14.</p>
+        <p class="text-slate-700 mt-3">Only about 4% of babies are born exactly on their estimated due date — most arrive within a window of 2 weeks before to 2 weeks after. Your doctor may adjust the date based on ultrasound measurements.</p>
+      </section>
+
+      <section class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 sm:p-8 my-8">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Trimesters at a Glance</h2>
+        <div class="grid sm:grid-cols-3 gap-3 text-sm">
+          <div class="p-4 rounded-xl bg-pink-50 border border-pink-100">
+            <div class="font-semibold text-pink-800">First Trimester</div>
+            <div class="text-slate-600 mt-1">Weeks 1–12. Major organ development; most common time for morning sickness.</div>
+          </div>
+          <div class="p-4 rounded-xl bg-amber-50 border border-amber-100">
+            <div class="font-semibold text-amber-800">Second Trimester</div>
+            <div class="text-slate-600 mt-1">Weeks 13–26. Often called the "golden" trimester — energy usually improves.</div>
+          </div>
+          <div class="p-4 rounded-xl bg-indigo-50 border border-indigo-100">
+            <div class="font-semibold text-indigo-800">Third Trimester</div>
+            <div class="text-slate-600 mt-1">Weeks 27–40. Final growth and preparation for birth.</div>
+          </div>
+        </div>
+        <p class="mt-6 text-xs text-slate-400">This tool provides general information and is not a substitute for medical care. Always consult your doctor or midwife for personal pregnancy guidance.</p>
+      </section>
+
+      <section class="my-8">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Related Calculators</h2>
+        <div class="grid sm:grid-cols-3 gap-4">
+          <a href="/age-calculator" class="block p-4 bg-white rounded-xl border border-slate-100 hover:border-indigo-300 hover:shadow transition">
+            <div class="font-semibold text-slate-800">Age Calculator</div>
+            <div class="text-sm text-slate-500 mt-1">Exact age between any two dates.</div>
+          </a>
+          <a href="/bmi-calculator" class="block p-4 bg-white rounded-xl border border-slate-100 hover:border-emerald-300 hover:shadow transition">
+            <div class="font-semibold text-slate-800">BMI Calculator</div>
+            <div class="text-sm text-slate-500 mt-1">Find your body mass index.</div>
+          </a>
+          <a href="/date-difference" class="block p-4 bg-white rounded-xl border border-slate-100 hover:border-sky-300 hover:shadow transition">
+            <div class="font-semibold text-slate-800">Date Difference</div>
+            <div class="text-sm text-slate-500 mt-1">Days between two dates.</div>
+          </a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="bg-white border-t border-slate-200 mt-12">
+    <div class="max-w-5xl mx-auto px-4 py-8 text-sm text-slate-500">
+      <div class="flex flex-col sm:flex-row justify-between gap-4">
+        <div>© <span id="yr"></span> CheckMyThing</div>
+        <nav class="flex gap-4">
+          <a href="/about" class="hover:text-indigo-600">About</a>
+          <a href="/privacy" class="hover:text-indigo-600">Privacy</a>
+          <a href="/terms" class="hover:text-indigo-600">Terms</a>
+          <a href="/contact" class="hover:text-indigo-600">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+
+  <script type="text/babel">
+    const { useState, useMemo } = React;
+
+    function DueDate() {
+      const [lmp, setLmp] = useState("");
+      const [cycle, setCycle] = useState(28);
+
+      const result = useMemo(() => {
+        if (!lmp) return null;
+        const l = new Date(lmp);
+        if (isNaN(l)) return { error: "Enter a valid date." };
+        const today = new Date();
+        today.setHours(0,0,0,0);
+        if (l > today) return { error: "LMP can't be in the future." };
+
+        // Naegele's rule with cycle-length adjustment
+        const adjust = (parseInt(cycle) || 28) - 28;
+        const due = new Date(l);
+        due.setDate(due.getDate() + 280 + adjust);
+
+        const elapsedDays = Math.floor((today - l) / 86400000);
+        const weeks = Math.floor(elapsedDays / 7);
+        const days = elapsedDays % 7;
+        const daysLeft = Math.floor((due - today) / 86400000);
+
+        let trimester = 1;
+        if (weeks >= 27) trimester = 3;
+        else if (weeks >= 13) trimester = 2;
+
+        const fmt = (d) => d.toLocaleDateString(undefined, { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+
+        const conception = new Date(l);
+        conception.setDate(conception.getDate() + 14 + adjust);
+
+        const progressPct = Math.max(0, Math.min(100, Math.round((elapsedDays / 280) * 100)));
+
+        return {
+          dueDate: fmt(due),
+          conceptionDate: fmt(conception),
+          weeks, days, daysLeft, trimester, progressPct,
+          isPast: daysLeft < 0
+        };
+      }, [lmp, cycle]);
+
+      return (
+        <div>
+          <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 border border-slate-100">
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label htmlFor="lmp" className="block text-sm font-medium text-slate-700 mb-1">First day of last period (LMP)</label>
+                <input id="lmp" type="date" value={lmp} onChange={e => setLmp(e.target.value)} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-pink-400 focus:ring-2 focus:ring-pink-100 outline-none" />
+              </div>
+              <div>
+                <label htmlFor="cycle" className="block text-sm font-medium text-slate-700 mb-1">Cycle length (days)</label>
+                <input id="cycle" type="number" min="20" max="45" value={cycle} onChange={e => setCycle(e.target.value)} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-pink-400 focus:ring-2 focus:ring-pink-100 outline-none" />
+                <p className="text-xs text-slate-400 mt-1">Standard is 28 days. Adjust if yours differs.</p>
+              </div>
+            </div>
+            {result && result.error && <p role="alert" className="mt-4 text-sm text-red-600">{result.error}</p>}
+          </div>
+
+          {result && !result.error && (
+            <div className="mt-6 bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden animate-fade-in">
+              <div className="bg-gradient-to-r from-pink-500 to-rose-600 p-6 sm:p-8 text-white text-center">
+                <div className="text-xs uppercase tracking-wider opacity-80">Estimated Due Date</div>
+                <div className="text-2xl sm:text-3xl font-bold mt-1">{result.dueDate}</div>
+                <div className="mt-2 text-sm opacity-95">
+                  {result.isPast ? `${Math.abs(result.daysLeft)} days past due date` : `${result.daysLeft} days to go`}
+                </div>
+              </div>
+              <div className="p-6 sm:p-8">
+                <div className="mb-5">
+                  <div className="flex justify-between text-xs text-slate-500 mb-1">
+                    <span>Week {result.weeks}, day {result.days}</span>
+                    <span>{result.progressPct}%</span>
+                  </div>
+                  <div className="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-pink-400 to-rose-500" style={{width: `${result.progressPct}%`}}></div>
+                  </div>
+                </div>
+                <div className="grid sm:grid-cols-3 gap-3 text-sm text-center">
+                  <div className="bg-slate-50 rounded-lg py-3">
+                    <div className="font-semibold text-slate-800">{result.weeks}w {result.days}d</div>
+                    <div className="text-xs text-slate-500 mt-1">Gestational age</div>
+                  </div>
+                  <div className="bg-slate-50 rounded-lg py-3">
+                    <div className="font-semibold text-slate-800">Trimester {result.trimester}</div>
+                    <div className="text-xs text-slate-500 mt-1">Current stage</div>
+                  </div>
+                  <div className="bg-slate-50 rounded-lg py-3">
+                    <div className="font-semibold text-slate-800 text-xs">{result.conceptionDate}</div>
+                    <div className="text-xs text-slate-500 mt-1">Estimated conception</div>
+                  </div>
+                </div>
+                <p className="mt-5 text-xs text-slate-400 text-center">Estimates only. Your doctor or midwife will confirm a due date with ultrasound measurements.</p>
+              </div>
+            </div>
+          )}
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById("due-root")).render(<DueDate />);
+  </script>
+</body>
+</html>

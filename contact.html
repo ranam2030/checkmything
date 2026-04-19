@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | CheckMyThing</title>
+  <meta name="description" content="Get in touch with CheckMyThing — bug reports, feature requests, partnership enquiries, or just to say hi." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://checkmything.com/contact" />
+  <meta property="og:title" content="Contact CheckMyThing" />
+  <meta property="og:url" content="https://checkmything.com/contact" />
+  <meta property="og:type" content="website" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact CheckMyThing",
+    "url": "https://checkmything.com/contact"
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;}</style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 min-h-screen text-slate-800">
+
+  <header class="bg-white/80 backdrop-blur sticky top-0 z-40 border-b border-slate-200">
+    <div class="max-w-5xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="/" class="flex items-center gap-2 font-bold text-slate-800">
+        <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-sm">✓</span>
+        <span>CheckMyThing</span>
+      </a>
+      <nav aria-label="Main navigation" class="hidden sm:flex items-center gap-6 text-sm text-slate-600">
+        <a href="/calculators" class="hover:text-indigo-600">Calculators</a>
+        <a href="/tools" class="hover:text-indigo-600">Tools</a>
+        <a href="/blog" class="hover:text-indigo-600">Blog</a>
+        <a href="/about" class="hover:text-indigo-600">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <nav aria-label="Breadcrumb" class="max-w-3xl mx-auto px-4 pt-4">
+    <ol class="flex flex-wrap gap-1 text-xs text-slate-500">
+      <li><a href="/" class="hover:text-indigo-600">Home</a></li>
+      <li>›</li>
+      <li aria-current="page" class="text-slate-700">Contact</li>
+    </ol>
+  </nav>
+
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <article class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 sm:p-10">
+      <header class="mb-6 text-center">
+        <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 shadow-lg mb-4 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-7 h-7"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h1 class="text-3xl font-bold text-slate-900">Get in touch</h1>
+        <p class="text-slate-600 mt-2">Questions, feedback, partnership ideas — we'd love to hear from you.</p>
+      </header>
+
+      <section class="grid sm:grid-cols-2 gap-4 mb-8 text-sm">
+        <div class="bg-slate-50 rounded-xl p-4">
+          <div class="font-semibold text-slate-800">General enquiries</div>
+          <a href="mailto:hello@checkmything.com" class="text-indigo-600 hover:underline">hello@checkmything.com</a>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-4">
+          <div class="font-semibold text-slate-800">Privacy &amp; data</div>
+          <a href="mailto:privacy@checkmything.com" class="text-indigo-600 hover:underline">privacy@checkmything.com</a>
+        </div>
+      </section>
+
+      <form id="contact-form" class="space-y-4" novalidate>
+        <div>
+          <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Name</label>
+          <input id="name" name="name" type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 outline-none" />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-slate-700 mb-1">Email</label>
+          <input id="email" name="email" type="email" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 outline-none" />
+        </div>
+        <div>
+          <label for="topic" class="block text-sm font-medium text-slate-700 mb-1">Topic</label>
+          <select id="topic" name="topic" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 outline-none bg-white">
+            <option>General feedback</option>
+            <option>Bug report</option>
+            <option>Calculator idea</option>
+            <option>Partnership</option>
+            <option>Privacy / data request</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-slate-700 mb-1">Message</label>
+          <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 outline-none"></textarea>
+        </div>
+        <button type="submit" class="w-full px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium shadow-md hover:shadow-lg hover:scale-[1.01] transition">
+          Send message
+        </button>
+        <p id="form-note" class="text-xs text-slate-400 text-center">This form opens your email client. For a hosted backend, see the comment in the source.</p>
+      </form>
+    </article>
+  </main>
+
+  <footer class="bg-white border-t border-slate-200 mt-12">
+    <div class="max-w-5xl mx-auto px-4 py-8 text-sm text-slate-500">
+      <div class="flex flex-col sm:flex-row justify-between gap-4">
+        <div>© <span id="yr"></span> CheckMyThing</div>
+        <nav class="flex gap-4">
+          <a href="/about" class="hover:text-indigo-600">About</a>
+          <a href="/privacy" class="hover:text-indigo-600">Privacy</a>
+          <a href="/terms" class="hover:text-indigo-600">Terms</a>
+          <a href="/contact" class="hover:text-indigo-600">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!--
+    TODO: For a real form backend, replace the mailto handler below with:
+    1) Formspree / Getform / Netlify Forms (no backend needed), OR
+    2) Your own POST endpoint on checkmything.com
+  -->
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const email = encodeURIComponent(document.getElementById('email').value.trim());
+      const topic = encodeURIComponent(document.getElementById('topic').value);
+      const msg = encodeURIComponent(document.getElementById('message').value.trim());
+      if (!name || !email || !msg) {
+        document.getElementById('form-note').textContent = 'Please fill in name, email, and message.';
+        document.getElementById('form-note').className = 'text-xs text-red-500 text-center';
+        return;
+      }
+      const body = `Name: ${decodeURIComponent(name)}%0AEmail: ${decodeURIComponent(email)}%0A%0A${decodeURIComponent(msg)}`;
+      window.location.href = `mailto:hello@checkmything.com?subject=[${topic}] CheckMyThing contact&body=${body}`;
+    });
+  </script>
+</body>
+</html>

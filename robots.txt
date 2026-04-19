@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /search
+Disallow: /*?*
+
+# AdSense crawler — allow for ad serving
+User-agent: Mediapartners-Google
+Allow: /
+
+# Sitemap
+Sitemap: https://checkmything.com/sitemap.xml
