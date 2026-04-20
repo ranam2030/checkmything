@@ -8,4 +8,4 @@ User-agent: Mediapartners-Google
 Allow: /
 
 # Sitemap
-Sitemap: https://checkmything.com/sitemap.xml
+Sitemap: https://checkmything.netlify.app/sitemap.xml
